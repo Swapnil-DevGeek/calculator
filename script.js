@@ -33,7 +33,7 @@ btns.forEach(button => {
         button.addEventListener('click', () =>{
             const expression = answer.textContent.replace(/÷/g, "/").replace(/×/g,"*").replace(/%/g,"*0.01").replace("+/-","*(-1)")              
             result = eval(expression);
-            answer.textContent = result;
+            answer.textContent = result.toFixed(8);
         })
     }
 })
